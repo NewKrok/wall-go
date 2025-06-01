@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import { all, fork } from 'redux-saga/effects';
 import counterReducer from './counter/slice';
+import routerReducer from './router/slice';
 import { counterSaga } from './counter/sagas';
 import { RootState } from '../types';
 
@@ -20,6 +21,7 @@ function* rootSaga() {
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    router: routerReducer,
     // Add other reducers here
   },
   middleware: (getDefaultMiddleware) =>

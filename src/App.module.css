@@ -1,4 +1,12 @@
 .app {
   text-align: center;
   height: 100%;
+
+  background-color: #ECECEC;
+  background-image:
+    linear-gradient(0deg, #FFD3B6 2px, transparent 2px),
+    linear-gradient(90deg, #A8E6CF 2px, transparent 2px),
+    linear-gradient(0deg, #FFAAA5 2px, transparent 2px),
+    linear-gradient(90deg, #87CFC9 2px, transparent 2px);
+  background-size: 80px 80px;
 }

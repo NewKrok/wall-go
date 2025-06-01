@@ -1,7 +1,13 @@
 // Store types
 export interface RootState {
   counter: CounterState;
+  router: RouterState;
   // Add other state slices here as the application grows
+}
+
+// Router feature types
+export interface RouterState {
+  currentPath: string;
 }
 
 // Counter feature types

@@ -1,25 +1,32 @@
 .appHeader {
-    background-color: #282c34;
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
 }
 
+.logo {
+    width: 13em;
+    height: auto;
+}
+
 .appNav {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: 1em;
+    background-color: #3c696d;
+    padding: 1em;
+    border-radius: 0.2em;
 }
 
 .navButton {
     padding: 0.5rem 1rem;
-    border: 2px solid #61dafb;
+    border: 2px solid #87CFC9;
     background-color: transparent;
-    color: white;
+    color: #87CFC9;
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
@@ -27,10 +34,10 @@
 }
 
 .navButton:hover {
-    background-color: rgba(97, 218, 251, 0.2);
+    background-color: rgba(135, 207, 201, 0.2);
 }
 
 .navButton.active {
-    background-color: #61dafb;
-    color: #282c34;
+    background-color: #A8E6CF;
+    color: #333333;
 }
