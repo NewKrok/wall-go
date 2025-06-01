@@ -2,9 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import { all, fork } from 'redux-saga/effects';
 import counterReducer from './counter/slice';
-import authReducer from './auth/slice';
 import { counterSaga } from './counter/sagas';
-import { authSaga } from './auth/sagas';
 import { RootState } from '../types';
 
 // Create the saga middleware
@@ -14,7 +12,6 @@ const sagaMiddleware = createSagaMiddleware();
 function* rootSaga() {
   yield all([
     fork(counterSaga),
-    fork(authSaga),
     // Add other sagas here
   ]);
 }
@@ -23,7 +20,6 @@ function* rootSaga() {
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    auth: authReducer,
     // Add other reducers here
   },
   middleware: (getDefaultMiddleware) =>

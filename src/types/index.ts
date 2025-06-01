@@ -1,9 +1,6 @@
-import { AuthState } from '../store/auth/slice';
-
 // Store types
 export interface RootState {
   counter: CounterState;
-  auth: AuthState;
   // Add other state slices here as the application grows
 }
 
